@@ -79,7 +79,7 @@ class FooterDown extends HTMLElement {
         const html = `
         <div class="footer_container">
         <div class="footer_left" id="footer_left">
-            <a href="home.html" class="f_logo">
+            <a href="../index.html" class="f_logo">
                 <img src="../assets/images/logo/LTS2_favicon.png" alt=""> &nbsp;nerd<span class="y">Y</span>book
             </a>
         </div>
