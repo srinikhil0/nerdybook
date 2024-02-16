@@ -1,0 +1,52 @@
+#hamburger {
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    z-index: 2;
+    color: #000;
+    background-color: #ededed;
+}
+
+#sidebar {
+    position: fixed;
+    left: -250px; /* Hide sidebar */
+    width: 250px;
+    height: 100%;
+    background-color: #ededed;
+    transition: left 0.3s;
+    padding-top: 10px;
+}
+
+#sidebar h2{
+    color: #000;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#sidebar a {
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: #ae172f;
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+
+    #sidebar {
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 400px){
+    
+}
