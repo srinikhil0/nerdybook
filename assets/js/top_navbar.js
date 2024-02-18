@@ -110,7 +110,7 @@ class TopNavbar extends HTMLElement {
                 </div>
                 <div class="top_s_navbar" id="top_s_navbar">
                     <a href="#"><i class="fa-brands fa-python"></i> Python</a>
-                    <a href="sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
+                    <a href="../../sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
                     <a href="#"><i class="fa-solid fa-shield"></i> Cyber Security</a>
                     <a href="#"><i class="fa-solid fa-gears"></i> Algorithms</a>
                     <a href="#"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
