@@ -113,7 +113,7 @@ class TopNavbar extends HTMLElement {
         <div class="top_nav_container">
                 <div class="top_f_navbar" id="top_f_navbar">
                     <a href="../index.html" class="logo">
-                        <img src="../assets/images/logo/LTS2_favicon.png" alt=""> &nbsp; nerd<span class="y">Y</span>book
+                        <img src="../../assets/images/logo/LTS2_favicon.png" alt=""> &nbsp; nerd<span class="y">Y</span>book
                     </a>
                     <a href="https://srinikhil0.github.io/sri/" class="portfolio" target="_blank"><i
                             class="fa-solid fa-briefcase"></i> Portfolio</a>
