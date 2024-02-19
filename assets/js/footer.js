@@ -103,24 +103,26 @@ class FooterDown extends HTMLElement {
         const isGitHubPages = window.location.hostname.includes('github.io');
         // Ensure there's no trailing slash in the basePath
         const basePath = isGitHubPages ? '/nerdybook' : '';
-    
+
         // Correctly set the logo image path
         logoImage.src = `${basePath}/assets/images/logo/LTS2_favicon.png`;
         const logoLink = this.shadowRoot.querySelector('.f_logo');
         // Ensure the href for the logo doesn't double up the base path
         logoLink.href = `${basePath}/index.html`;
-    
+
         // Adjust navigation links
         const navLinks = this.shadowRoot.querySelectorAll('.footer_f_right a');
         navLinks.forEach(link => {
-            const hrefValue = link.getAttribute('href');
+            let hrefValue = link.getAttribute('href');
             if (hrefValue && !hrefValue.startsWith('http')) {
-                // Prevent doubling of the base path in href
-                link.setAttribute('href', `${basePath}/${hrefValue.replace(/^\//, '')}`);
+                // Remove leading slashes to prevent incorrect path concatenation
+                hrefValue = hrefValue.replace(/^\//, '');
+                // Correctly adjust the path based on whether the site is hosted on GitHub Pages
+                link.setAttribute('href', `${basePath}/${hrefValue}`);
             }
         });
     }
-    
+
 
 }
 customElements.define('footer-down', FooterDown);
