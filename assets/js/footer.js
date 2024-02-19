@@ -111,7 +111,7 @@ class FooterDown extends HTMLElement {
         logoLink.href = `${basePath}index.html`;
     
         // Adjust navigation links
-        const navLinks = this.shadowRoot.querySelectorAll('.footer_container a');
+        const navLinks = this.shadowRoot.querySelectorAll('.footer_f_right a');
         navLinks.forEach(link => {
             const hrefValue = link.getAttribute('href');
             if (hrefValue && !hrefValue.startsWith('http')) {
