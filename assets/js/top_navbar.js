@@ -121,7 +121,7 @@ class TopNavbar extends HTMLElement {
                     <a href="python/intro.html"><i class="fa-brands fa-python"></i> Python</a>
                     <a href="sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
                     <a href="cysec/intro.html"><i class="fa-solid fa-shield"></i> Cyber Security</a>
-                    <a href="algo/intro.html"><i class="fa-solid fa-gears"></i> Algorithms</a>
+                    <a href="dsa/intro.html"><i class="fa-solid fa-gears"></i> DSA</a>
                     <a href="seedlabs/intro.html"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
                 </div>
             </div>
