@@ -7,7 +7,7 @@ class FooterDown extends HTMLElement {
         style.textContent = `@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');`
             + `
         .footer_container {
-            position: fixed;
+            // position: relative;
             left: 0;
             bottom: 0;
             width: 100%;
@@ -86,7 +86,7 @@ class FooterDown extends HTMLElement {
 
         <div class="footer_f_right" id="footer_f_right">
             <a href="#"><i class="fa-brands fa-python"></i> Python</a>
-            <a href="../sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
+            <a href="../../sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
             <a href="#"><i class="fa-solid fa-shield"></i> Cyber Security</a>
             <a href="#"><i class="fa-solid fa-gears"></i> Algorithms</a>
             <a href="#"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>

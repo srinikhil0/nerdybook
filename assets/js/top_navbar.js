@@ -6,7 +6,16 @@ class TopNavbar extends HTMLElement {
         // Include the Font Awesome CSS directly
         style.textContent = `@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');`
             + `
+            .top_nav_container{
+                position: fixed;
+                top: 0;
+                width: 100%;
+                z-index: 3;
+            }
+
             .top_f_navbar {
+                // top: 0;
+                // position: fixed;
                 text-decoration: none;
                 background-color: #fff;
                 width: 100%;
@@ -38,6 +47,7 @@ class TopNavbar extends HTMLElement {
             }
             
             .top_s_navbar {
+                // position: fixed;
                 text-decoration: none;
                 background-color: #000;
                 width: 100%;

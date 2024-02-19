@@ -2,22 +2,27 @@
     cursor: pointer;
     padding: 10px;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     color: #000;
     background-color: #ededed;
+    top: 0rem;
 }
 
 #sidebar {
     position: fixed;
-    left: -250px; /* Hide sidebar */
-    width: 250px;
-    height: 100%;
+    top: 5rem; /* Adjust if your top navbar's height changes */
+    left: -16rem; /* Hide sidebar initially */
+    width: 16rem;
+    height: calc(100% - 5rem); /* Adjust this value to match the top navbar's height */
     background-color: #ededed;
     transition: left 0.3s;
     padding-top: 10px;
+    padding-bottom: 10px; /* Added padding at the bottom for scrolling */
+    overflow-y: auto; /* Ensure scrollbar is available for overflow content */
 }
 
-#sidebar h2{
+
+#sidebar h2 {
     color: #000;
     padding: 0 20px;
     text-align: center;
@@ -37,6 +42,34 @@
     color: #fff;
 }
 
+.p_container {
+    margin-top: 7rem;
+    /* Height of the top navbar */
+    transition: margin-left 0.3s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Highlight class for active link */
+.active-link {
+    background-color: #ae172f !important; /* Override any other background color */
+    color: #fff !important;
+}
+
+
 @media screen and (min-width: 768px) {
     #hamburger {
         display: none;
@@ -45,8 +78,11 @@
     #sidebar {
         left: 0;
     }
+
+    .p_container {
+        /* Width of the visible sidebar */
+        margin-left: 17rem;
+    }
 }
 
-@media screen and (min-width: 400px){
-    
-}
+@media screen and (min-width: 400px) {}
