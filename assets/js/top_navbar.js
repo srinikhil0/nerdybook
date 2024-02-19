@@ -120,10 +120,9 @@ class TopNavbar extends HTMLElement {
                 <div class="top_s_navbar" id="top_s_navbar">
                     <a href="python/intro.html"><i class="fa-brands fa-python"></i> Python</a>
                     <a href="sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
-                    <a href="#"><i class="fa-solid fa-shield"></i> Cyber Security</a>
-                    <a href="#"><i class="fa-solid fa-gears"></i> Algorithms</a>
-                    <a href="#"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
-                    <a href="#"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
+                    <a href="cysec/intro.html"><i class="fa-solid fa-shield"></i> Cyber Security</a>
+                    <a href="algo/intro.html"><i class="fa-solid fa-gears"></i> Algorithms</a>
+                    <a href="seedlabs/intro.html"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
                 </div>
             </div>
         `;
