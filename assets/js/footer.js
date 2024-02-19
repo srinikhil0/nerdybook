@@ -7,7 +7,7 @@ class FooterDown extends HTMLElement {
         style.textContent = `@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');`
             + `
         .footer_container {
-            // position: fixed;
+            /* position: fixed; */
             left: 0;
             bottom: 0;
             width: 100%;
@@ -100,27 +100,27 @@ class FooterDown extends HTMLElement {
 
     setLogoPath() {
         const logoImage = this.shadowRoot.querySelector('#footerLogo');
-        // Base path for GitHub Pages deployment
         const isGitHubPages = window.location.hostname.includes('github.io');
-        const basePath = isGitHubPages ? '/nerdybook/' : '/';
-
+        // Ensure there's no trailing slash in the basePath
+        const basePath = isGitHubPages ? '/nerdybook' : '';
     
         // Correctly set the logo image path
-        logoImage.src = `${basePath}assets/images/logo/LTS2_favicon.png`;
+        logoImage.src = `${basePath}/assets/images/logo/LTS2_favicon.png`;
         const logoLink = this.shadowRoot.querySelector('.f_logo');
-        logoLink.href = `${basePath}index.html`;
+        // Ensure the href for the logo doesn't double up the base path
+        logoLink.href = `${basePath}/index.html`;
     
         // Adjust navigation links
         const navLinks = this.shadowRoot.querySelectorAll('.footer_f_right a');
         navLinks.forEach(link => {
             const hrefValue = link.getAttribute('href');
             if (hrefValue && !hrefValue.startsWith('http')) {
-                // Ensure href values are correctly prefixed with the base path
-                // This assumes hrefValue already starts with a '/'
-                link.setAttribute('href', `${basePath}${hrefValue}`);
+                // Prevent doubling of the base path in href
+                link.setAttribute('href', `${basePath}/${hrefValue.replace(/^\//, '')}`);
             }
         });
     }
+    
 
 }
 customElements.define('footer-down', FooterDown);
