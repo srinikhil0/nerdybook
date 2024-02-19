@@ -7,7 +7,7 @@ class FooterDown extends HTMLElement {
         style.textContent = `@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');`
             + `
         .footer_container {
-            // position: relative;
+            // position: fixed;
             left: 0;
             bottom: 0;
             width: 100%;
@@ -78,22 +78,32 @@ class FooterDown extends HTMLElement {
 
         const html = `
         <div class="footer_container">
-        <div class="footer_left" id="footer_left">
-            <a href="../index.html" class="f_logo">
-                <img src="assets/images/logo/LTS2_favicon.png" alt=""> &nbsp;nerd<span class="y">Y</span>book
-            </a>
-        </div>
+            <div class="footer_left" id="footer_left">
+                <a href="#" class="f_logo">
+                    <img id="footerLogo" src="" alt="nerdYbook logo"> &nbsp;nerd<span class="y">Y</span>book
+                </a>
+            </div>
 
-        <div class="footer_f_right" id="footer_f_right">
-            <a href="#"><i class="fa-brands fa-python"></i> Python</a>
-            <a href="../../sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
-            <a href="#"><i class="fa-solid fa-shield"></i> Cyber Security</a>
-            <a href="#"><i class="fa-solid fa-gears"></i> Algorithms</a>
-            <a href="#"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
+            <div class="footer_f_right" id="footer_f_right">
+                <a href="#"><i class="fa-brands fa-python"></i> Python</a>
+                <a href="../../sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
+                <a href="#"><i class="fa-solid fa-shield"></i> Cyber Security</a>
+                <a href="#"><i class="fa-solid fa-gears"></i> Algorithms</a>
+                <a href="#"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
+            </div>
         </div>
-    </div>
         `;
         this.shadowRoot.innerHTML += html;
+
+        this.setLogoPath();
+    }
+
+    setLogoPath() {
+        const logoImage = this.shadowRoot.querySelector('#footerLogo');
+        const isSubPage = window.location.pathname.includes('/sql/');
+        logoImage.src = isSubPage ? '../../assets/images/logo/LTS2_favicon.png' : './assets/images/logo/LTS2_favicon.png';
+        const logoLink = this.shadowRoot.querySelector('.f_logo');
+        logoLink.href = isSubPage ? '../../index.html' : './index.html';
     }
 }
 customElements.define('footer-down', FooterDown);

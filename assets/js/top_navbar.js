@@ -111,13 +111,12 @@ class TopNavbar extends HTMLElement {
 
         const html = `
         <div class="top_nav_container">
-                <div class="top_f_navbar" id="top_f_navbar">
-                    <a href="../index.html" class="logo">
-                        <img src="assets/images/logo/LTS2_favicon.png" alt=""> &nbsp; nerd<span class="y">Y</span>book
-                    </a>
-                    <a href="https://srinikhil0.github.io/sri/" class="portfolio" target="_blank"><i
-                            class="fa-solid fa-briefcase"></i> Portfolio</a>
-                </div>
+            <div class="top_f_navbar" id="top_f_navbar">
+                <a href="#" class="logo">
+                    <img id="navbarLogo" src="" alt="nerdYbook logo"> &nbsp; nerd<span class="y">Y</span>book
+                </a>
+                <a href="https://srinikhil0.github.io/sri/" class="portfolio" target="_blank"><i class="fa-solid fa-briefcase"></i> Portfolio</a>
+            </div>
                 <div class="top_s_navbar" id="top_s_navbar">
                     <a href="#"><i class="fa-brands fa-python"></i> Python</a>
                     <a href="sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
@@ -129,6 +128,18 @@ class TopNavbar extends HTMLElement {
             </div>
         `;
         this.shadowRoot.innerHTML += html;
+
+        this.setLogoPath();
+    }
+
+    setLogoPath() {
+        const logoImage = this.shadowRoot.querySelector('#navbarLogo');
+        // Determine the correct path based on the current page's URL
+        const isSubPage = window.location.pathname.includes('/sql/');
+        logoImage.src = isSubPage ? '../assets/images/logo/LTS2_favicon.png' : './assets/images/logo/LTS2_favicon.png';
+        // Update the href for the logo link if needed
+        const logoLink = this.shadowRoot.querySelector('.logo');
+        logoLink.href = isSubPage ? '../index.html' : './index.html';
     }
 }
 customElements.define('top-navbar', TopNavbar);
