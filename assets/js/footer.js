@@ -100,28 +100,31 @@ class FooterDown extends HTMLElement {
 
     setLogoPathAndNavLinks() {
         const isGitHubPages = window.location.hostname.includes('github.io');
-        // Correctly calculate the base path for GitHub Pages
+        // Assuming the site is hosted at '/nerdybook/' on GitHub Pages
         const basePath = isGitHubPages ? '/nerdybook/' : '/';
-
+    
         // Set the logo image path
         const logoImage = this.shadowRoot.querySelector('#footerLogo');
         logoImage.src = `${basePath}assets/images/logo/LTS2_favicon.png`;
-
+    
         // Update the href for the logo link
         const logoLink = this.shadowRoot.querySelector('.f_logo');
-        logoLink.href = `${basePath}index.html`;
-
-        // Adjust navigation links to include the full GitHub Pages path
+        logoLink.href = `${basePath}`;
+    
+        // Adjust navigation links
         const navLinks = this.shadowRoot.querySelectorAll('.footer_f_right a');
         navLinks.forEach(link => {
-            const hrefValue = link.getAttribute('href');
-            // Check if the href is not an absolute URL
+            let hrefValue = link.getAttribute('href');
+            // If hrefValue is a relative path, adjust it
             if (hrefValue && !hrefValue.startsWith('http')) {
-                // Prepend the base path, ensuring correct paths on GitHub Pages
-                link.setAttribute('href', `${basePath}${hrefValue.startsWith('/') ? '' : ''}${hrefValue}`);
+                // Ensure hrefValue does not start with '/'
+                hrefValue = hrefValue.replace(/^\//, '');
+                // Concatenate basePath with the adjusted hrefValue
+                link.setAttribute('href', `${basePath}${hrefValue}`);
             }
         });
     }
+    
 
 
 }
