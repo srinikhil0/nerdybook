@@ -95,30 +95,30 @@ class FooterDown extends HTMLElement {
         `;
         this.shadowRoot.innerHTML += html;
 
-        this.setLogoPath();
+        this.setLogoPathAndNavLinks();
     }
 
-    setLogoPath() {
-        const logoImage = this.shadowRoot.querySelector('#footerLogo');
+    setLogoPathAndNavLinks() {
         const isGitHubPages = window.location.hostname.includes('github.io');
-        // Ensure there's no trailing slash in the basePath
-        const basePath = isGitHubPages ? '/nerdybook' : '';
+        // Correctly calculate the base path for GitHub Pages
+        const basePath = isGitHubPages ? '/nerdybook/' : '/';
 
-        // Correctly set the logo image path
-        logoImage.src = `${basePath}/assets/images/logo/LTS2_favicon.png`;
+        // Set the logo image path
+        const logoImage = this.shadowRoot.querySelector('#footerLogo');
+        logoImage.src = `${basePath}assets/images/logo/LTS2_favicon.png`;
+
+        // Update the href for the logo link
         const logoLink = this.shadowRoot.querySelector('.f_logo');
-        // Ensure the href for the logo doesn't double up the base path
-        logoLink.href = `${basePath}/index.html`;
+        logoLink.href = `${basePath}index.html`;
 
-        // Adjust navigation links
+        // Adjust navigation links to include the full GitHub Pages path
         const navLinks = this.shadowRoot.querySelectorAll('.footer_f_right a');
         navLinks.forEach(link => {
-            let hrefValue = link.getAttribute('href');
+            const hrefValue = link.getAttribute('href');
+            // Check if the href is not an absolute URL
             if (hrefValue && !hrefValue.startsWith('http')) {
-                // Remove leading slashes to prevent incorrect path concatenation
-                hrefValue = hrefValue.replace(/^\//, '');
-                // Correctly adjust the path based on whether the site is hosted on GitHub Pages
-                link.setAttribute('href', `${basePath}/${hrefValue}`);
+                // Prepend the base path, ensuring correct paths on GitHub Pages
+                link.setAttribute('href', `${basePath}${hrefValue.startsWith('/') ? '' : ''}${hrefValue}`);
             }
         });
     }
