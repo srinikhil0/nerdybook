@@ -100,22 +100,27 @@ class FooterDown extends HTMLElement {
 
     setLogoPath() {
         const logoImage = this.shadowRoot.querySelector('#footerLogo');
-        // Extract the pathname and split it to analyze the segments
-        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+        // Base path for GitHub Pages deployment
+        const isGitHubPages = window.location.hostname.includes('github.io');
+        const basePath = isGitHubPages ? '/nerdybook/' : '/';
+
     
-        // Assuming your site is hosted at the root and each section (sql, python, etc.) is directly under the root
-        let relativePathToRoot = './'; // Default for root level
-    
-        // If the current page is in a subdirectory, adjust the path
-        if (pathSegments.length > 1) { // Adjust this condition based on your directory depth
-            // Construct the relative path back to the root directory
-            relativePathToRoot = pathSegments.map(() => '../').join('');
-        }
-    
-        // Set the correct paths based on the current location
-        logoImage.src = `${relativePathToRoot}assets/images/logo/LTS2_favicon.png`;
+        // Correctly set the logo image path
+        logoImage.src = `${basePath}assets/images/logo/LTS2_favicon.png`;
         const logoLink = this.shadowRoot.querySelector('.f_logo');
-        logoLink.href = `${relativePathToRoot}index.html`;
+        logoLink.href = `${basePath}index.html`;
+    
+        // Adjust navigation links
+        const navLinks = this.shadowRoot.querySelectorAll('.footer_container a');
+        navLinks.forEach(link => {
+            const hrefValue = link.getAttribute('href');
+            if (hrefValue && !hrefValue.startsWith('http')) {
+                // Ensure href values are correctly prefixed with the base path
+                // This assumes hrefValue already starts with a '/'
+                link.setAttribute('href', `${basePath}${hrefValue}`);
+            }
+        });
     }
+
 }
 customElements.define('footer-down', FooterDown);
