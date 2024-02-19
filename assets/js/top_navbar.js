@@ -118,7 +118,7 @@ class TopNavbar extends HTMLElement {
                 <a href="https://srinikhil0.github.io/sri/" class="portfolio" target="_blank"><i class="fa-solid fa-briefcase"></i> Portfolio</a>
             </div>
                 <div class="top_s_navbar" id="top_s_navbar">
-                    <a href="#"><i class="fa-brands fa-python"></i> Python</a>
+                    <a href="python/intro.html"><i class="fa-brands fa-python"></i> Python</a>
                     <a href="sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
                     <a href="#"><i class="fa-solid fa-shield"></i> Cyber Security</a>
                     <a href="#"><i class="fa-solid fa-gears"></i> Algorithms</a>
@@ -134,12 +134,28 @@ class TopNavbar extends HTMLElement {
 
     setLogoPath() {
         const logoImage = this.shadowRoot.querySelector('#navbarLogo');
-        // Determine the correct path based on the current page's URL
-        const isSubPage = window.location.pathname.includes('/sql/');
-        logoImage.src = isSubPage ? '../assets/images/logo/LTS2_favicon.png' : './assets/images/logo/LTS2_favicon.png';
-        // Update the href for the logo link if needed
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    
+        let relativePathToRoot = './'; // Default for root level
+    
+        if (pathSegments.length > 1) {
+            relativePathToRoot = pathSegments.map(() => '../').join('');
+        }
+    
+        logoImage.src = `${relativePathToRoot}assets/images/logo/LTS2_favicon.png`;
         const logoLink = this.shadowRoot.querySelector('.logo');
-        logoLink.href = isSubPage ? '../index.html' : './index.html';
+        logoLink.href = `${relativePathToRoot}index.html`;
+    
+        // Correct the navigation links
+        const navLinks = this.shadowRoot.querySelectorAll('.top_s_navbar a');
+        navLinks.forEach(link => {
+            const hrefValue = link.getAttribute('href');
+            if (hrefValue && !hrefValue.startsWith('http')) { // Ignore absolute URLs
+                // Correct the path based on the site's structure
+                link.setAttribute('href', `${relativePathToRoot}${hrefValue}`);
+            }
+        });
     }
+    
 }
 customElements.define('top-navbar', TopNavbar);

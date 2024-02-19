@@ -85,7 +85,7 @@ class FooterDown extends HTMLElement {
             </div>
 
             <div class="footer_f_right" id="footer_f_right">
-                <a href="#"><i class="fa-brands fa-python"></i> Python</a>
+                <a href="../../python/intro.html"><i class="fa-brands fa-python"></i> Python</a>
                 <a href="../../sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
                 <a href="#"><i class="fa-solid fa-shield"></i> Cyber Security</a>
                 <a href="#"><i class="fa-solid fa-gears"></i> Algorithms</a>
@@ -100,10 +100,22 @@ class FooterDown extends HTMLElement {
 
     setLogoPath() {
         const logoImage = this.shadowRoot.querySelector('#footerLogo');
-        const isSubPage = window.location.pathname.includes('/sql/');
-        logoImage.src = isSubPage ? '../../assets/images/logo/LTS2_favicon.png' : './assets/images/logo/LTS2_favicon.png';
+        // Extract the pathname and split it to analyze the segments
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    
+        // Assuming your site is hosted at the root and each section (sql, python, etc.) is directly under the root
+        let relativePathToRoot = './'; // Default for root level
+    
+        // If the current page is in a subdirectory, adjust the path
+        if (pathSegments.length > 1) { // Adjust this condition based on your directory depth
+            // Construct the relative path back to the root directory
+            relativePathToRoot = pathSegments.map(() => '../').join('');
+        }
+    
+        // Set the correct paths based on the current location
+        logoImage.src = `${relativePathToRoot}assets/images/logo/LTS2_favicon.png`;
         const logoLink = this.shadowRoot.querySelector('.f_logo');
-        logoLink.href = isSubPage ? '../../index.html' : './index.html';
+        logoLink.href = `${relativePathToRoot}index.html`;
     }
 }
 customElements.define('footer-down', FooterDown);
