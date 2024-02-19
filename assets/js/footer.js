@@ -85,8 +85,8 @@ class FooterDown extends HTMLElement {
             </div>
 
             <div class="footer_f_right" id="footer_f_right">
-                <a href="../../python/intro.html"><i class="fa-brands fa-python"></i> Python</a>
-                <a href="../../sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a>
+                <a href="python/index.html"><i class="fa-brands fa-python"></i> Python</a>
+                <a href="sql/index.html"><i class="fa-solid fa-database"></i> SQL</a>
                 <a href="#"><i class="fa-solid fa-shield"></i> Cyber Security</a>
                 <a href="#"><i class="fa-solid fa-gears"></i> Algorithms</a>
                 <a href="#"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
