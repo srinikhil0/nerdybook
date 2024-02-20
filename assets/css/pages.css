@@ -116,10 +116,6 @@ img {
     gap: 0.5rem;
 }
 
-.card__body p{
-    text-align: justify;
-}
-
 .tag {
     align-self: flex-start;
     padding: 0.25em 0.75em;
