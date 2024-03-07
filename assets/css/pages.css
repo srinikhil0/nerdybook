@@ -166,7 +166,7 @@ img {
     background-color: #ae172f;
 }
 
-.c_button {
+.c_button a{
     text-decoration: none;
     color: #fff;
 }

@@ -123,6 +123,7 @@ class TopNavbar extends HTMLElement {
                     <a href="cysec/intro.html"><i class="fa-solid fa-shield"></i> Cyber Security</a>
                     <a href="dsa/intro.html"><i class="fa-solid fa-gears"></i> DSA</a>
                     <a href="seedlabs/intro.html"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
+                    <a href="ctf/intro.html"><i class="fa-solid fa-flag"></i></i> CTF</a>
                 </div>
             </div>
         `;
