@@ -26,8 +26,7 @@
     /* Ensure scrollbar is available for overflow content */
 }
 
-
-#sidebar h2 {
+#sidebar h2, h3, h4, h5 {
     color: #000;
     padding: 0 20px;
     text-align: center;
@@ -166,7 +165,7 @@ img {
     background-color: #ae172f;
 }
 
-.c_button a{
+.c_button, .card__footer a{
     text-decoration: none;
     color: #fff;
 }
@@ -219,6 +218,13 @@ ol {
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+code{
+    background: gray;
+    width: 100%;
+    color:#fafafa;
+    padding: 2px;
 }
 
 

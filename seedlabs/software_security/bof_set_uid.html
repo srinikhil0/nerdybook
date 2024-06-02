@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdy Book</title>
+
+    <!-- ============= FAVICON ================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logo/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/logo/site.webmanifest">
+
+    <!-- ============= ICONS ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- ============= STYLESHEET ============== -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- ============= JS ============== -->
+    <script src="../../assets/js/home.js"></script>
+    <script src="../../assets/js/top_navbar.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/pages.js"></script>
+</head>
+
+<body>
+    <div class="home_container">
+
+        <!-- ================= NAVBAR ================= -->
+        <top-navbar></top-navbar>
+
+        <!-- ================= SIDE NAVBAR ================= -->
+        <div class="page_container">
+            <div id="hamburger" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></div>
+            <div class="p_sidebar">
+                <nav id="sidebar">
+                    <h2>SEED Labs</h2>
+                    <a href="../intro.html">Introduction</a>
+                    <h5>Network Security</h5>
+                    <a href="../network_security/network_sec.html" class="active-link">Introduction</a>
+                    <h5>Software Security</h5>
+                    <a href="../software_security/software_sec.html" class="active-link">Introduction</a>
+                </nav>
+            </div>
+
+            <!-- ================= PAGE CONTENT ================= -->
+            <div class="p_container">
+                <div class="p_content">
+                    <h1>Buffer Overflow - SetUID</h1>
+                    <p>
+                        You can find the Instructions here: <a
+                            href="https://seedsecuritylabs.org/Labs_20.04/Files/Buffer_Overflow_Setuid/Buffer_Overflow_Setuid.pdf">BOF_SetUID</a>
+                    </p> <br>
+
+                    <strong>Software Requirements</strong>
+                    <p>
+                    <ul>
+                        <li>Virtual Box or VMware or anyother virtual machine platform which supports VDI</li>
+                        <li>Ubuntu 20.4 LTS image (find it here: <a
+                                href="https://seedsecuritylabs.org/labsetup.html">VM</a>)</li>
+                    </ul>
+                    </p> <br>
+
+                    <strong>Environment Setup</strong>
+                    <p>
+                        Since, we are trying to do Buffer Overflow (BoF) attack using Ubuntu, we need to turnoff a few
+                        countermeasures. <br>
+                    <ul>
+                        <li>
+                            <strong>Address Space Randomization</strong> Ubuntu and other Linux-based systems use
+                            address space randomization, making it difficult to guess exact addresses, a critical step
+                            in buffer-overflow attacks, which can be disabled using the command:
+                            <code> sudo sysctl -w kernel.randomize_va_space=0 </code>
+                        </li> <br>
+                        <li>
+                            <strong>Configuring /bin/sh</strong> In Ubuntu OS, the /bin/sh symbolic link points to the
+                            /bin/dash shell, which has a security countermeasure. This makes the attack more difficult
+                            as the victim program is a Set-UID program. To link /bin/sh to another shell without this
+                            countermeasure, we install zsh in a Ubuntu 20.04 VM:
+                            <code>sudo ln -sf /bin/zsh /bin/sh</code>
+                        </li>
+                    </ul> <br>
+
+                    </p>
+
+                    <p>
+                        <strong>Task 1: Getting Familiar with Shellcode</strong>
+                        Buffer-overflow attacks aim to inject malicious code into a target program, executing it using
+                        the target program's privilege, commonly using shellcode.
+                        <strong>The C Version of Shell Code</strong>
+                        <img src="../../assets/images/notes" alt="">
+
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- ================= Footer ================= -->
+            <footer-down></footer-down>
+
+        </div>
+
+</body>
+
+</html>
