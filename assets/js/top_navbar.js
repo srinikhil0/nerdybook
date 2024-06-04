@@ -118,10 +118,9 @@ class TopNavbar extends HTMLElement {
                 <a href="https://srinikhil0.github.io/sri/" class="portfolio" target="_blank"><i class="fa-solid fa-briefcase"></i> Portfolio</a>
             </div>
                 <div class="top_s_navbar" id="top_s_navbar">
-                <!-- <a href="python/intro.html"><i class="fa-brands fa-python"></i> Python</a>
-                    <a href="sql/intro.html"><i class="fa-solid fa-database"></i> SQL</a> --!>
+                    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
                     <a href="cysec/intro.html"><i class="fa-solid fa-shield"></i> Cyber Security</a>
-                    <a href="dsa/intro.html"><i class="fa-solid fa-gears"></i> DSA</a>
+                    <a href="cybergloss/cybergloss.html"><i class="fa-solid fa-book-open"></i> CyberGloss</a>
                     <a href="seedlabs/intro.html"><i class="fa-solid fa-flask-vial"></i> Seed Labs</a>
                     <a href="ctf/intro.html"><i class="fa-solid fa-flag"></i></i> CTF</a>
                 </div>

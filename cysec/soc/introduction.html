@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdy Book</title>
+
+    <!-- ============= FAVICON ================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logo/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/logo/site.webmanifest">
+
+    <!-- ============= ICONS ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- ============= STYLESHEET ============== -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- ============= JS ============== -->
+    <script src="../../assets/js/home.js"></script>
+    <script src="../../assets/js/top_navbar.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/pages.js"></script>
+</head>
+
+<body>
+    <div class="home_container">
+
+        <!-- ================= NAVBAR ================= -->
+        <top-navbar></top-navbar>
+
+        <!-- ================= SIDE NAVBAR ================= -->
+        <div class="page_container">
+            <div id="hamburger" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></div>
+            <div class="p_sidebar">
+                <nav id="sidebar">
+                    <h2>Security</h2>
+                    <a href="../intro.html">Introduction</a>
+                    <h2>Malware</h2>
+                    <a href="../malware/introduction.html" class="active-link">Introduction</a>
+                    <h2>SOC</h2>
+                    <a href="introduction.html" class="active-link">Introduction</a>
+                </nav>
+            </div>
+
+            <!-- ================= PAGE CONTENT ================= -->
+            <div class="p_container">
+                <div class="p_content">
+
+                    <!-- ================= SECURITY OPERATIONS (SecOps) ================= -->
+                    <h1>Security Operations Center (SOC)</h1>
+                    <p>
+                        <strong>What are Security Operations (SecOps)?</strong> <br>
+                        Security Operations or SecOps is a term used to describe the collaboration between security and
+                        operations teams within an organization. IT operations has continued to expand over the years,
+                        branching out into individual specialties that tends to create siloed activities. SecOps seeks
+                        to foster more collaboration between IT security and IT operations to help prioritize network
+                        and data security and mitigate risk without sacrificing IT performance. It also provides a more
+                        narrow focus than the similar concept of DevSecOps, as DevOps teams are not a requirement for
+                        creating and implementing an organization's security measures. A key tenet of SecOps, however,
+                        is to ensure that security is a fundamental part of every project and included in even the
+                        earliest stages of project development.<a style="font-size: 12px;"
+                            href="https://www.paloaltonetworks.com/cyberpedia/what-is-security-operations"
+                            target="_blank">[Paloaltonetworks]</a><br>
+                        <br>
+
+                        <!-- ================= SECURITY OPERATIONS CENTER (SOC) ================= -->
+                        <strong>What is a Security Operations Center (SOC)?</strong> <br>
+                        Security Operations Center or SOC is a team of experts that proactively monitor an
+                        organization's ability to operate secuerly. A SOC Team gathers information from various
+                        resources, including <a href="../../cybergloss/cybergloss.html#cti">Cyber Threat Intelligence
+                            (CTI)</a> feeds to the log files from systems all around the enterprise. A SOC team
+                        carefully
+                        monitors a company's assets, from on-premise servers in data centers to cloud resources.
+                        Accurate monitoring is critical. Therefore, SOC team members will monitor servers, end points
+                        and perimeter devices like firewalls and switches.
+
+                        <br> <br>
+
+                        <!-- ================= WHAT A SOC DOES? ================= -->
+                        <strong>What a Security Operations Center (SOC) does?</strong><br>
+                        SOC activites and responsibilites falls into 3 general categories <br><br>
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTab(event, 'Tab1')">Preparation, Planning and
+                            Prevention</button>
+                        <button class="tablinks" onclick="openTab(event, 'Tab2')">Monitoring, Detection and
+                            Response</button>
+                        <button class="tablinks" onclick="openTab(event, 'Tab3')">Recovery, refinement and
+                            compliance</button>
+                    </div>
+
+                    <div id="Tab1" class="tabcontent">
+                        <strong>Asset Inventory:</strong> A SOC needs to maintain an exhaustive inventory of everything
+                        that needs to be protected, inside or outside the data center (for example applications,
+                        databases, servers, cloud services, endpoints, etc.) and all the tools used to protect them
+                        (firewalls, antivirus/anti-malware/anti-ransomware tools, monitoring software, etc.). Many SOCs
+                        will use an asset discovery solution for this task. <br><br>
+                        <strong>Routine maintenance and preparation: </strong>To maximize the effectiveness of security
+                        tools and measures in place, the SOC performs preventive maintenance such as applying software
+                        patches and upgrades, and continually updating firewalls, allowlist and blocklists, and security
+                        policies and procedures. The SOC can also create system backups—or assist in creating backup
+                        policies or procedures—to ensure business continuity in the event of a data breach, ransomware
+                        attack or other cybersecurity incident. <br><br>
+                        <strong>Incident response planning: </strong>The SOC is responsible for developing the
+                        organization's incident response plan, which defines activities, roles and responsibilities in
+                        the event of a threat or incident, and the metrics by which the success of any incident response
+                        will be measured. <br><br>
+                        <strong>Regular Testing: </strong>The SOC team performs vulnerability assessments—comprehensive
+                        assessments that identify each resource's vulnerability to potential or emerging threats and the
+                        associate costs. It also conducts penetration tests that simulate specific attacks on one or
+                        more systems. The team remediates or fine-tunes applications, security policies, best practices
+                        and incident response plans based on the results of these tests. <br><br>
+                        <strong>Staying current: </strong>The SOC stays up to date on the latest security solutions and
+                        technologies, and on the latest threat intelligence—news and information about cyberattacks and
+                        the hackers who perpetrate them, gathered from social media, industry sources and the dark web.
+                    </div>
+
+                    <div class="tabcontent" id="Tab2">
+                        <strong>Continuous, around-the-clock security monitoring: </strong> The SOC monitors the entire
+                        extended IT infrastructure—applications, servers, system software, computing devices, cloud
+                        workloads, the network—24/7/365 for signs of known exploits and for any suspicious activity.
+                        <br><br>
+                        <strong>Log Management: </strong> Log management—the collection and analysis of log data
+                        generated by every network event—is an important subset of monitoring. While most IT departments
+                        collect log data, it's the analysis that establishes normal or baseline activity and reveals
+                        anomalies that indicate suspicious activity. In fact, many hackers count on the fact that
+                        companies don't always analyze log data, which can allow their viruses and malware to run
+                        undetected for weeks or even months on the victim's systems. Most SIEM solutions include log
+                        management capability. <br><br>
+                        <strong>Threat Detection: </strong> The SOC team sorts the signals from the noise—the
+                        indications of actual cyberthreats and hacker uses from the false positives—and then triages the
+                        threats by severity. Modern SIEM solutions include artificial intelligence (AI) that automates
+                        these processes and which 'learns' from the data to get better at spotting suspicious activity
+                        over time. <br><br>
+                        <strong>Incident Response: </strong> In response to a threat or actual incident, the SOC moves
+                        to limit the damage. Actions can include:
+
+                        - Root cause investigation, to determine the technical vulnerabilities that gave hackers access
+                        to
+                        the system, as well as other factors (such as bad password hygiene or poor enforcement of
+                        policies) that contributed to the incident. <br>
+                        - Shutting down compromised endpoints or disconnecting them from the network. <br>
+                        - Isolating compromised areas of the network or rerouting network traffic. <br>
+                        - Pausing or stopping compromised applications or processes. <br>
+                        - Deleting damaged or infected files. <br>
+                        - Running antivirus or anti-malware software. <br>
+                        - Decommissioning passwords for internal and external users. <br>
+                    </div>
+
+                    <div class="tabcontent" id="Tab3">
+                        <strong>Recovery and Remediation: </strong>Once an incident is contained, the SOC eradicates
+                        the threat, then works to recover the impacted assets to their state before the incident (for
+                        example wiping, restoring and reconnecting disks, user devices and other endpoints; restoring
+                        network traffic; restarting applications and processes). In the event of a data breach or
+                        ransomware attack, recovery might also involve cutting over to backup systems, and resetting
+                        passwords and authentication credentials. <br><br>
+                        <strong>Post-mortem and refinement: </strong>To prevent a recurrence, the SOC uses any new
+                        intelligence gained from the incident to better address vulnerabilities, update processes and
+                        policies, choose new cybersecurity tools or revise the incident response plan. At a higher
+                        level, SOC team might also try to determine whether the incident reveals a new or changing
+                        cybersecurity trend for which the team needs to prepare. <br><br>
+                        <strong>Compliance management: </strong>It's the SOC's job to ensure all applications, systems
+                        and security tools and processes comply with data privacy regulations such as GDPR (Global Data
+                        Protection Regulation), CCPA (California Consumer Privacy Act), PCI DSS (Payment Card Industry
+                        Data Security Standard), and HIPAA (Health Insurance Portability and Accountability Act).
+                        Following an incident, the SOC makes sure that users, regulators, law enforcement and other
+                        parties are notified in accordance with regulations and that the required incident data is
+                        retained for evidence and auditing.
+                    </div>
+
+                    <!-- ================= SOC TIERS ================= -->
+                    <br><br><Strong>SOC Tiers</Strong> <br>
+                    A Security Operations Center (SOC) typically operates with a tiered structure to efficiently manage
+                    and respond to security incidents. Each tier has specific roles and responsibilities, with
+                    increasing levels of expertise and complexity.
+                    <br><br>
+                    <div class="tab">
+                        <button class="tablinks" onclick="openTab(event, 'soc1')">SOC Tier 1</button>
+                        <button class="tablinks" onclick="openTab(event, 'soc2')">SOC Tier 2</button>
+                        <button class="tablinks" onclick="openTab(event, 'soc3')">SOC Tier 3</button>
+                    </div>
+
+                    <div id="soc1" class="tabcontent">
+                        <h2>Junior Security Analyst (Tier 1) Triage</h2>
+                        <p>
+                            - Monitors the network traffic logs and events <br>
+                            - Works on the tickets, closes and alerts <br>
+                            - Performs basic investigations and mitigations <br>
+                        </p>
+                    </div>
+
+                    <div id="soc2" class="tabcontent">
+                        <h2>Security Operations Analyst (Tier 2) Incident Responder</h2>
+                        <p>
+                            - Focuses on deeper investigations, analysis and detection <br>
+                            - Proactively hunts for adversaries <br>
+                            - Monitors and resolves more complex alerts <br>
+                        </p>
+                    </div>
+
+                    <div id="soc3" class="tabcontent">
+                        <h2>Security Operations Analyst (Tier 3) Threat Hunter</h2>
+                        <p>
+                            - Works on more advanced investigations <br>
+                            - Performs advanced threat hunting and adversary research
+                            - Malware reversing
+                        </p>
+                    </div>
+                    <br>
+
+                    <!-- ================= BENEFITS OF SOC ================= -->
+                    <strong>Security Operations Center (SOC) benefits:</strong> <br>
+                    <strong>- Asset Protection: </strong>The proactive monitoring and rapid response capabilities of SOCs
+                    help prevent unauthorized access and minimize the risk of data breaches. This will safeguard
+                    critical systems, sensitive data and intellectual property from security breaches and theft.
+                    <br><br>
+
+                    <strong>- Business continuity: </strong>By reducing security incidents and minimizing their impact,
+                    SOCs ensure uninterrupted business operations. This helps maintain productivity, revenue streams and
+                    customer satisfaction. <br><br>
+
+                    <strong>- Regulatory Compliance: </strong>SOCs help organizations meet regulatory requirements and
+                    industry standards for cybersecurity by implementing effective security measures and maintaining
+                    detailed records of incidents and responses. <br><br>
+
+                    <strong>- Cost savings: </strong>Investing in proactive security measures through a SOC can result in
+                    significant savings by preventing costly data breaches and cyberattacks. The upfront investment is
+                    often far less than the financial damages and risks to reputation caused by a security incident,
+                    and, if outsourced, replaces the need for staffing security professionals in-house. <br><br>
+
+                    <strong>- Customer Trust: </strong>Demonstrating a commitment to cybersecurity through the operation
+                    of a SOC enhances trust and confidence among customers and stakeholders. <br><br>
+
+                    <strong>- Enchanced incident response: </strong>The rapid response capabilities of SOCs reduce
+                    downtime and financial losses by containing threats and quickly restoring normal operations to
+                    minimize disruptions. <br><br>
+
+                    <strong>- Improved risk management: </strong>By analyzing security events and trends, SOC teams can
+                    identify an organization's potential vulnerabilities. They can then take proactive measures to
+                    mitigate them before they are exploited. <br><br>
+
+                    <strong>- Proactive threat detection: </strong>By continuously monitoring networks and systems, SOCs
+                    can more quickly identify and mitigate security threats. This minimizes potential damage and data
+                    breaches and helps organizations stay ahead of an evolving threat landscape. <br><br>
+                    </p>
+
+                    <!-- ================= SECURITY OPERATIONS (SecOps) ================= -->
+
+                </div>
+            </div>
+
+
+            <!-- ================= Footer ================= -->
+            <footer-down></footer-down>
+
+        </div>
+
+</body>
+
+</html>

@@ -177,6 +177,10 @@ img {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+.p_content p{
+    text-align: justify;
+}
+
 ul,
 ol {
     padding-left: 0;
@@ -225,6 +229,17 @@ code{
     width: 100%;
     color:#fafafa;
     padding: 2px;
+}
+
+.cg_container{
+    margin: 7rem;
+}
+
+.cg_card{
+    margin: 20px 2px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 
