@@ -242,6 +242,17 @@ code{
     padding: 15px;
 }
 
+.headtext{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.headline{
+    flex-grow: 1;
+    height: 2px;
+    background-color: #9f9f9f;
+}
 
 @media screen and (min-width: 768px) {
     #hamburger {
