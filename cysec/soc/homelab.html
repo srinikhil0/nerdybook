@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdy Book</title>
+
+    <!-- ============= FAVICON ================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logo/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/logo/site.webmanifest">
+
+    <!-- ============= ICONS ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- ============= STYLESHEET ============== -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- ============= JS ============== -->
+    <script src="../../assets/js/home.js"></script>
+    <script src="../../assets/js/top_navbar.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/pages.js"></script>
+</head>
+
+<body>
+    <div class="home_container">
+
+        <!-- ================= NAVBAR ================= -->
+        <top-navbar></top-navbar>
+
+        <!-- ================= SIDE NAVBAR ================= -->
+        <div class="page_container">
+            <div id="hamburger" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></div>
+            <div class="p_sidebar">
+                <nav id="sidebar">
+                    <h2>Security</h2>
+                    <a href="../intro.html">Introduction</a>
+                    <h2>Malware</h2>
+                    <a href="../malware/introduction.html" class="active-link">Introduction</a>
+                    <h2>SOC</h2>
+                    <a href="introduction.html" class="active-link">Introduction</a>
+                    <a href="homelab.html" class="active-link">HomeLabs</a>
+                </nav>
+            </div>
+
+            <!-- ================= PAGE CONTENT ================= -->
+            <div class="p_container">
+                 <!-- ================= CARDS ================= -->
+                 <div class="c_container">
+                    <!-- ================= Malware Analysis ================= -->
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="../assets/images/notes/malware_analysis/malware_analysis.png" alt="card__image"
+                                class="card__image" width="600">
+                        </div>
+                        <div class="card__body">
+                            <span class="tag tag-blue">Malware</span>
+                            <h4>Malware Analysis</h4>
+                            <p>Malware analysis dives deep into the world of malicious software, dissecting its code and
+                                behavior to unveil how it works, spreads, and can be stopped. This key cybersecurity
+                                skill helps experts craft defenses, detect threats, and fix vulnerabilities by
+                                understanding the enemy's moves. </p>
+                        </div>
+                        <div class="card__footer">
+                            <a href="malware/introduction.html" class="c_button">Go to Page <i
+                                    class="fa-solid fa-right-to-bracket"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- ================= SOC ================= -->
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="../assets/pdf/seedlabs/network_security/vpn_lab/vpn_tunnel.png" alt="card__image"
+                                class="card__image" width="600">
+                        </div>
+                        <div class="card__body">
+                            <span class="tag tag-red">Security Operations Center</span>
+                            <h4>Security Operations Center (SOC)</h4>
+                            <p>A Security Operations Center (SOC) is a centralized unit focused on monitoring,
+                                detecting, and responding to cyber threats. By leveraging advanced tools and skilled
+                                analysts, the SOC provides round-the-clock protection, ensuring the organization's
+                                information assets and systems remain secure from breaches and attacks. This proactive
+                                approach helps minimize risks and ensures rapid incident response.</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="c_button">
+                                <a href="soc/introduction.html">Go to Page <i
+                                        class="fa-solid fa-right-to-bracket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ================= FRAMEWORKS ================= -->
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="../assets/images/misc/CSF.jpg" alt="card__image"
+                                class="card__image" width="600">
+                        </div>
+                        <div class="card__body">
+                            <span class="tag tag-red">Cyber Security Frameworks</span>
+                            <h4>Cyber Security Frameworks</h4>
+                            <p>Cyber Security Frameworks offer structured guidelines for managing and mitigating
+                                cybersecurity risks. Examples include the NIST Cybersecurity Framework, ISO/IEC 27001,
+                                and CIS Controls. These frameworks help organizations establish robust security
+                                policies, implement effective controls, and ensure regulatory compliance. Adopting a
+                                Cyber Security Framework enhances resilience against cyber attacks and safeguards
+                                critical assets and information.</p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="c_button">
+                                <a href="csf/introduction.html">Go to Page <i
+                                    class="fa-solid fa-right-to-bracket"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- ================= Footer ================= -->
+    <footer-down></footer-down>
+
+</div>
+
+</body>
+
+</html>
