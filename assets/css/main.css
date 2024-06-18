@@ -85,6 +85,17 @@ q {
     margin: 20px 0; /* Adds some space above and below the quote */
 }
 
+.gdpr__countries{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.countries__column{
+    flex: 1;
+    margin: 0 10px;
+}
+
 /* Optional: Add a responsive touch */
 @media (max-width: 768px) {
     .body_f_content {

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdy Book</title>
+
+    <!-- ============= FAVICON ================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logo/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/logo/site.webmanifest">
+
+    <!-- ============= ICONS ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- ============= STYLESHEET ============== -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- ============= JS ============== -->
+    <script src="../../assets/js/home.js"></script>
+    <script src="../../assets/js/top_navbar.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/pages.js"></script>
+</head>
+
+<body>
+    <div class="home_container">
+
+        <!-- ================= NAVBAR ================= -->
+        <top-navbar></top-navbar>
+
+        <!-- ================= SIDE NAVBAR ================= -->
+        <div class="page_container">
+            <div id="hamburger" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></div>
+            <div class="p_sidebar">
+                <nav id="sidebar">
+                    <h2>Security</h2>
+                    <a href="../intro.html">Introduction</a>
+                    <h2>Malware</h2>
+                    <a href="../malware/introduction.html">Introduction</a>
+                    <h2>SOC</h2>
+                    <a href="../soc/introduction.html">Introduction</a>
+                    <a href="../soc/homelab.html">HomeLabs</a>
+                    <h2>CSF</h2>
+                    <a href="introduction.html" class="active-link">Introduction</a>
+                    <a href="gdpr.html">GDPR</a>
+                </nav>
+            </div>
+
+            <!-- ================= PAGE CONTENT ================= -->
+            <div class="p_container">
+                <div class="p_content">
+
+                    <!-- ================= PII (PERSONALLY IDENTIFIABLE INFORMATION) ================= -->
+                    <h1>PII (PERSONALLY IDENTIFIABLE INFORMATION)</h1>
+                    <p>
+                        <strong>What is PII?</strong> <br>
+                        PII acronym for Personally Identifiable Information refers to any data that could potentially
+                        identify a specific individual. <br><br>
+                        <strong>1. Definition</strong><br>
+                        PII includes information that can be used to distinguish or trace an individual's identity,
+                        either alone or when combined with other personal or identifying information. Common examples
+                        include: <br>
+                    <ul>
+                        <li>Full Name</li>
+                        <li>Social Security Number</li>
+                        <li>Driver's License Number</li>
+                        <li>Passport Number</li>
+                        <li>Email Address</li>
+                        <li>Phone Number</li>
+                        <li>Physical Address</li>
+                        <li>Biometric Data (Fingerprints, Facial Recognition data)</li>
+                    </ul> <br><br>
+                    <strong>2. Types of PII</strong><br>
+                    PII can be classified into two categories:
+                    <ul>
+                        <li><strong>Direct Identifiers:</strong> Information that can directly identify an individual,
+                            such as name, Social Security number, or biometric data.</li>
+                        <li><strong>Indirect Identifiers:</strong> Information that, when combined with other data, can
+                            identify an individual, such as date of birth, gender, or ZIP code.</li>
+                    </ul><br><br>
+                    <strong>3. Legal and Regulatory Considerations</strong><br>
+                    Various laws and regulations govern the collection, storage, and processing of PII to protect
+                    individuals' privacy and prevent data breaches. Some key regulations include: <br>
+                    <ul>
+                        <li><strong>GDPR</strong> - General Data Protection Regulation <a href="gdpr.html">(more)</a>
+                        </li>
+                        <li><strong>CCPS</strong> - California Consumer Privacy Act <a href="ccpa.html">(more)</a></li>
+                        <li><strong>HIPAA</strong> - Health Insurance Probability and Accountability Act <a
+                                href="hipaa.html">(more)</a></li>
+                        <li><strong>FISMA</strong> - Federal Information Security Management Act <a
+                                href="fisma.html">(more)</a></li>
+                        <li><strong>PCI DSS</strong> - Payment Card Industry Data Security Standard <a
+                                href="pcidss.html">(more)</a></li>
+                    </ul> <br><br>
+                    <strong>4. Best practices for Handling PII</strong><br>
+                    To protect PII, organizations should implement best practices such as:
+                    <ul>
+                        <li><strong>Data Minimization:</strong> Collect only the necessary data required for a specific
+                            purpose</li>
+                        <li><strong>Access Control:</strong> Restrict access to PII to authorized personnel only.</li>
+                        <li><strong>Encryption:</strong> Use encryption to protect PII during transmission and storage.
+                        </li>
+                        <li><strong>Regular Audits:</strong> Conduct regular audits and assessments to ensure compliance
+                            with data protection policies.</li>
+                        <li><strong>Training:</strong> Educate employees on the importance of data privacy and security
+                            measures.</li>
+                        <li><strong>Incident Response:</strong> Develop and implement an incident response plan to
+                            address data breaches promptly.</li>
+                    </ul><br><br>
+                    </p>
+
+
+                </div>
+            </div>
+
+
+            <!-- ================= Footer ================= -->
+            <footer-down></footer-down>
+
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdy Book</title>
+
+    <!-- ============= FAVICON ================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/logo/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/logo/site.webmanifest">
+
+    <!-- ============= ICONS ================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- ============= STYLESHEET ============== -->
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- ============= JS ============== -->
+    <script src="../../assets/js/home.js"></script>
+    <script src="../../assets/js/top_navbar.js"></script>
+    <script src="../../assets/js/footer.js"></script>
+    <script src="../../assets/js/pages.js"></script>
+</head>
+
+<body>
+    <div class="home_container">
+
+        <!-- ================= NAVBAR ================= -->
+        <top-navbar></top-navbar>
+
+        <!-- ================= SIDE NAVBAR ================= -->
+        <div class="page_container">
+            <div id="hamburger" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></div>
+            <div class="p_sidebar">
+                <nav id="sidebar">
+                    <h2>Security</h2>
+                    <a href="../intro.html">Introduction</a>
+                    <h2>Malware</h2>
+                    <a href="../malware/introduction.html">Introduction</a>
+                    <h2>SOC</h2>
+                    <a href="../soc/introduction.html">Introduction</a>
+                    <a href="../soc/homelab.html">HomeLabs</a>
+                    <h2>CSF</h2>
+                    <a href="introduction.html">Introduction</a>
+                    <a href="gdpr.html" class="active-link">GDPR</a>
+                </nav>
+            </div>
+
+            <!-- ================= PAGE CONTENT ================= -->
+            <div class="p_container">
+                <div class="p_content">
+
+                    <!-- ================= GDPR (GENARAL DATA PROTECTION REGULATION) ================= -->
+                    <h1>GDPR (General Data Protection Regulation)</h1>
+                    <p>
+                        <strong>What is GDPR?</strong> <br>
+                        The General Data Protection Regulation (GDPR) is a comprehensive data protection law enacted by
+                        the European Union (EU) to protect the privacy and personal data of EU citizens. Here’s a
+                        detailed overview of what you should know about GDPR: <br><br>
+                        <strong>1. Scope and Applicability</strong><br>
+                    <ul>
+                        <li><strong>Territorial Scope:</strong> GDPR applies to all organizations, regardless of their
+                            location, that process the personal data of individuals residing in the EU.</li>
+                        <li><strong>Material Scope:</strong> It covers any processing of personal data, including
+                            collection, storage, use, and transfer, whether it is automated or manual.</li>
+                    </ul><br><br>
+                    <strong>2. Key Definitions</strong><br>
+                    <ul>
+                        <li><strong>Personal Data:</strong> Any information relating to an identified or identifiable
+                            natural person (data subject). This includes names, email addresses, location data, and IP
+                            addresses.</li>
+                        <li><strong>Data Processing:</strong> Any operation performed on personal data, such as
+                            collection, storage, alteration, retrieval, and deletion.</li>
+                        <li><strong>Data Collector:</strong> The entity that determines the purposes and means of
+                            processing personal data.</li>
+                        <li><strong>Data Processor:</strong> The entity that processes personal data on behalf of the
+                            data controller.</li>
+                    </ul> <br><br>
+                    <strong>3. Priciples of GDPR</strong><br>
+                    GDPR is based on several key principles that govern the processing of personal data: <br>
+                    <ul>
+                        <li><strong>Lawfulness, Fairness, and Transparency: </strong>Personal data must be processed
+                            lawfully, fairly, and in a transparent manner.</li>
+                        <li><strong>Purpose Limitation: </strong>Data must be collected for specified, explicit, and
+                            legitimate purposes and not further processed in a manner incompatible with those purposes.
+                        </li>
+                        <li><strong>Data Minimization: </strong>Data collected must be adequate, relevant, and limited
+                            to what is necessary in relation to the purposes for which they are processed.</li>
+                        <li><strong>Accuracy: </strong>Personal data must be accurate and, where necessary, kept up to
+                            date.</li>
+                        <li><strong>Storage Limitation: </strong>Data must be kept in a form that permits identification
+                            of data subjects for no longer than is necessary for the purposes for which the data is
+                            processed.</li>
+                        <li><strong>Integrity and Confidentiality: </strong>Data must be processed in a manner that
+                            ensures appropriate security, including protection against unauthorized or unlawful
+                            processing and accidental loss, destruction, or damage.</li>
+                        <li><strong>Accountability: </strong> Data controllers are responsible for, and must be able to
+                            demonstrate compliance with, all these principles.</li>
+                    </ul> <br><br>
+                    <strong>4. Data Subject Rights</strong><br>
+                    GDPR grants individuals several rights regarding their personal data: <br>
+                    <ul>
+                        <li><strong>Right to be Informed: </strong>Individuals have the right to be informed about the
+                            collection and use of their personal data.</li>
+                        <li><strong>Right of Access: </strong>Individuals have the right to access their personal data
+                            and obtain information about how it is being processed.</li>
+                        <li><strong>Right to Rectification: </strong>Individuals have the right to have inaccurate
+                            personal data corrected or completed if it is incomplete.</li>
+                        <li><strong>Right to Erasure (Right to be forgotten): </strong>Individuals have the right to
+                            request the deletion of their personal data in certain circumstances.</li>
+                        <li><strong>Right to Restrict Processing: </strong>Individuals can request the restriction or
+                            suppression of their personal data under certain conditions.</li>
+                        <li><strong>Right to Data Portability: </strong>Individuals have the right to receive their
+                            personal data in a structured, commonly used, and machine-readable format and to transmit it
+                            to another controller.</li>
+                        <li><strong>Right to Object: </strong>Individuals have the right to object to the processing of
+                            their personal data in certain circumstances, including for direct marketing purposes.</li>
+                        <li><strong>Rights Related to Automated Decision-Making and Profiling: </strong>Individuals have
+                            the right not to be subject to a decision based solely on automated processing, including
+                            profiling, which produces legal or similarly significant effects.</li>
+                    </ul> <br><br>
+                    <strong>5. Data Protection by Design and by Default</strong><br>
+                    GDPR requires organizations to implement appropriate technical and organizational measures to ensure
+                    data protection principles are integrated into processing activities from the outset (by design) and
+                    that only necessary personal data is processed (by default). <br><br>
+                    <strong>6. Data Protection Impact Assessments (DPIAs)</strong><br>
+                    Organizations must conduct DPIAs when processing operations are likely to result in a high risk to
+                    the rights and freedoms of individuals. DPIAs help identify and mitigate risks associated with data
+                    processing activities. <br><br>
+                    <strong>7. Data Breach Notification</strong><br>
+                    GDPR mandates that organizations notify the relevant supervisory authority of a personal data breach
+                    within 72 hours of becoming aware of it, unless the breach is unlikely to result in a risk to
+                    individuals' rights and freedoms. If the breach is likely to result in a high risk, affected
+                    individuals must also be informed without undue delay. <br><br>
+                    <strong>8. Penalities of Non-Compliance</strong><br>
+                    GDPR imposes significant fines for non-compliance, with penalties of up to €20 million or 4% of the
+                    organization's total global turnover of the preceding financial year, whichever is higher. <br>
+                    Understanding and complying with GDPR is crucial for organizations that process the personal data of
+                    EU citizens to ensure the protection of individuals' privacy and avoid substantial fines. <br><br>
+
+                    <!-- ================= GDPR CHECKLIST ================= -->
+                    <h1>GDPR Checklist for Data Controllers <a href="https://gdpr.eu/checklist/"
+                            target="_blank">(GDPR.eu)</a></h1>
+                    <strong>Lawful basis for Transparency</strong><br>
+                    <ul>
+                        <li>Conduct an information audit to determine what information you process and who has access to
+                            it.</li>
+                        <li>Have a legal justification for your data processing activities.</li>
+                        <li>Provide clear information about your data processing and legal justification in your privacy
+                            policy.</li>
+                    </ul><br><br>
+                    <strong>Data Security</strong><br>
+                    <ul>
+                        <li>Take data protection into account at all times, from the moment you begin developing a
+                            product to each time you process data.</li>
+                        <li>Encrypt, pseudonymize, or anonymize personal data wherever possible.</li>
+                        <li>Create an internal security policy for your team members, and build awareness about data
+                            protection.</li>
+                        <li>Know when to conduct a data protection impact assessment, and have a process in place to
+                            carry it out.</li>
+                        <li>Have a process in place to notify the authorities and your data subjects in the event of a
+                            data breach.</li>
+                    </ul> <br><br>
+                    <strong>Accountability and Governance</strong><br>
+                    <ul>
+                        <li>Designate someone responsible for ensuring GDPR compliance across your organization.</li>
+                        <li>Sign a data processing agreement between your organization and any third parties that
+                            process personal data on your behalf.</li>
+                        <li>If your organization is outside the EU, appoint a representative within one of the EU member
+                            states.</li>
+                        <li>Appoint a Data Protection Officer (if necessary)</li>
+                    </ul> <br><br>
+                    <strong>Privacy Rights</strong><br>
+                    <ul>
+                        <li>It's easy for your customers to request and receive all the information you have about them.
+                        </li>
+                        <li>It's easy for your customers to correct or update inaccurate or incomplete information.</li>
+                        <li>It's easy for your customers to request to have their personal data deleted.</li>
+                        <li>It's easy for your customers to ask you to stop processing their data.</li>
+                        <li>It's easy for your customers to receive a copy of their personal data in a format that can
+                            be easily transferred to another company.</li>
+                        <li>It's easy for your customers to object to you processing their data.</li>
+                        <li>If you make decisions about people based on automated processes, you have a procedure to
+                            protect their rights.</li>
+                    </ul>
+                    <strong><q>we want to remind you that this checklist is not in any way legal advice. There
+                            are dozens of provisions in the GDPR that apply only in rare instances, which would be
+                            counterproductive to cover here. You should check with a lawyer to make sure your
+                            organization fully complies with the GDPR.</q></strong><br><br>
+
+                    <strong>European Union (EU) member states covered by GDPR</strong><br>
+                    <div class="gdpr__countries">
+                        <div class="countries__column">
+                            <ul>
+                                <li>Austria</li>
+                                <li>Belgium</li>
+                                <li>Bulgaria</li>
+                                <li>Croatia</li>
+                                <li>Cyprus</li>
+                                <li>Czech Republic</li>
+                                <li>Denmark</li>
+                                <li>Estonia</li>
+                                <li>Finland</li>
+                            </ul>
+                        </div>
+                        <div class="countries__column">
+                            <ul>
+                                <li>France</li>
+                                <li>Germany</li>
+                                <li>Greece</li>
+                                <li>Hungary</li>
+                                <li>Ireland</li>
+                                <li>Italy</li>
+                                <li>Latvia</li>
+                                <li>Lithuania</li>
+                                <li>Luxembourg</li>
+                            </ul>
+                        </div>
+                        <div class="countries__column">
+                            <ul>
+                                <li>Malta</li>
+                                <li>Netherlands</li>
+                                <li>Poland</li>
+                                <li>Portugal</li>
+                                <li>Romania</li>
+                                <li>Slovakia</li>
+                                <li>Slovenia</li>
+                                <li>Spain</li>
+                                <li>Sweden</li>
+                            </ul>
+                        </div>
+                    </div> <br>
+
+                    <strong>EEA Countries also covered by GDPR</strong>
+                    <div class="gdpr__countries">
+                        <div class="countries__column">
+                            <ul>
+                                <li>Iceland</li>
+                                <li>Liechtenstein</li>
+                                <li>Norway</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- ================= Footer ================= -->
+            <footer-down></footer-down>
+
+        </div>
+
+</body>
+
+</html>
